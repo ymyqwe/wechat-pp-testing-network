@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+
+  <view class="main-content" animation="{{animationShow}}">
+    <view class="title">单位: Mbps</view>
+    <view class="subtitle">平均速度: {{avgSpeed}}Mb/s</view>
+    <view class="canvas-container">
+      <view class='axis'>
+        <view>100</view>
+        <view>75</view>
+        <view>50</view>
+        <view>25</view>
+        <view>0</view>
+      </view>
+      <canvas class="ecg-canvas" canvas-id="firstCanvas"></canvas>
+    </view>  
+  </view>
+
+  <view class="loading" wx:if="{{loading == false}}">
+    <image src="../../imgs/gene.png"></image>
+  </view>
+  <view class="loading" wx:if="{{loading == true}}" animation="{{animationHide}}">
+    <image src="../../imgs/gene.gif"></image>
+    <text>玩命加载中....</text>
+  </view>
+  <button class="test-button" type="{{speedButtonStatus}}" 
+   bindtap="testSpeed" animation="{{moveDown}}">{{speedStatus}}</button>
+  <!-- <view class="speed-desc" wx:for="{{speed}}"> {{item}} </view> -->
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>

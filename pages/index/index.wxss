@@ -1,0 +1,86 @@
+/**index.wxss**/
+.ecg-canvas {
+  width: 280px; 
+  height: 400px;
+  background: rgba(255, 255, 255, 0.8);
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  overflow: hidden;
+  /* margin-left: 20px; */
+}
+.main-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+   /* margin: 200rpx 0 0;  */
+  box-sizing: border-box;
+  position: relative;
+  opacity: 0;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.subtitle {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.test-button {
+  margin-top: -100px;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.axis {
+  /* position: absolute; */
+  width: 20px;
+  height: 400px;
+  /* left: 40rpx; */
+  /* top: 50rpx; */
+   display: flex; 
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-right: 5px;
+}
+.loading {
+  /* flex-direction: column; */
+  position: absolute;
+  top: 200rpx;
+  align-items: center;
+  justify-content: center;
+}
+.loading > text {
+  display: flex;
+  justify-content: center;
+}
+.loading > image {
+  display: block;
+  width: 300px; 
+  height: 200px;
+  background: transparent;
+}
+.canvas-container {
+  display: flex;
+  padding: 0 10rpx;
+  justify-content: space-around;
+}
