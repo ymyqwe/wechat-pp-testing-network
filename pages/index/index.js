@@ -64,7 +64,7 @@ Page({
     this.context = wx.createCanvasContext('firstCanvas');
     this.x = 0;
     this.y = 200;
-    this.context.setStrokeStyle("#000000");
+    this.context.setStrokeStyle("#01cbba");
     this.context.setLineWidth(2);
     this.context.moveTo(0, 200);
     // this.init();
@@ -192,8 +192,8 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: '呵呵',
-      path: '/page/user?id=123'
+      title: '快来测个速吧~',
+      path: 'pages/index/index'
     }
   }
 })
